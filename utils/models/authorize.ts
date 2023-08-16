@@ -5,11 +5,24 @@ export interface Authorize {
 }
 
 export interface Authenticator {
-    authenticator: String,
-    idp: String,
+    authenticator: string,
+    idp: string,
     metadata: any
 }
 
 export interface AuthenticatorInterface {
-    authenticator: Authenticator,
+    authenticator: Authenticator
+}
+
+export enum AuthenticatorType {
+    BASIC_AUTH = "BasicAuthenticator",
+    FIDO = "FIDOAuthenticator",
+    OPENID = "OpenIDConnectAuthenticator",
+    GOOGLE_OPENID = "GoogleOIDCAuthenticator",
+    TOTP = "totp"
+}
+
+export enum IdpType {
+    GOOGLE = "google",
+    LOCAL = "LOCAL"
 }

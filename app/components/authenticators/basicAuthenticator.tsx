@@ -2,7 +2,7 @@ import { AuthenticatorInterface } from '@/utils/models/authorize';
 import { Button, Container, TextField } from '@/utils/theme/muiLib';
 
 interface BasicAuthenticatorPropsInterface extends AuthenticatorInterface {
-    key: number;
+    key: string;
 }
 
 export default function BasicAuthenticator(props: BasicAuthenticatorPropsInterface) {
