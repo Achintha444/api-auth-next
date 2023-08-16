@@ -1,0 +1,19 @@
+.main-grid {
+    height: 100%;
+}
+
+.main-item {
+    padding: 0rem 1rem 0rem 1rem;
+}
+
+.title-container {
+    height: 20vh;
+}
+
+.profile-menu {
+    margin-top: 45px;
+}
+
+.loading-stack {
+    height: 100%;
+}

@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+html,body {
+    background:
+        radial-gradient(50% 50% at 50% 50%,
+            #f372215f 0%,
+            rgba(255, 255, 255, 0) 100%),
+        linear-gradient(180deg, #f6eee3 0%, #f6eee3 100%);
+    padding: 0;
+    margin: 0;
+    display: inline;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #F6EEE3;
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #6670804f;
+    /* color of the scroll thumb */
+    border-radius: 20px;
+    /* roundness of the scroll thumb */
+    border: 3px solid #F6EEE3;
+    /* creates padding around scroll thumb */
+}
+
+a {
+    color: #F37321;
+    text-decoration: none;
+}
+
+.sub-item {
+    height: 100vh;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        color-scheme: dark;
+    }
+
+    body {
+        color: #667080;
+        background: #F6EEE3;
+    }
+}
