@@ -44,6 +44,10 @@ a {
     height: 100vh;
 }
 
+.sub-item-loading-screen {
+    height: 60vh;
+}
+
 @media (prefers-color-scheme: dark) {
     html {
         color-scheme: dark;

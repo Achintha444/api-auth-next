@@ -9,4 +9,8 @@ export class FeatureConfig {
     public static getAPIDogId = (): string => config.APIDogId;
 
     public static getAPIDogAuthId = (): string => config.APIDogAuthId;
+
+    public static getNonce = (): string => config.nonce;
+
+    public static getFlowId = (): string => config.flowId;
 }

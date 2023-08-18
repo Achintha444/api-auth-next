@@ -1,5 +1,9 @@
+'use client';
+
+import { authenticate } from '@/app/api/api';
 import { AuthenticatorInterface } from '@/utils/models/authorize';
 import { Button, Container, TextField } from '@/utils/theme/muiLib';
+import { FormEventHandler, SyntheticEvent } from 'react';
 
 interface BasicAuthenticatorPropsInterface extends AuthenticatorInterface {
     key: string;
@@ -7,7 +11,16 @@ interface BasicAuthenticatorPropsInterface extends AuthenticatorInterface {
 
 export default function BasicAuthenticator(props: BasicAuthenticatorPropsInterface) {
 
-    const { authenticator } = props;
+    const { checkLoggedIn, flowId, nonce, authenticator } = props;
+
+    const signinOnSubmit = (e: SyntheticEvent) => {
+
+        e.preventDefault();
+
+        authenticate(authenticator, flowId, nonce, { username: 'username', password: 'password' })
+            .then((data) => checkLoggedIn(data))
+            .catch((error) => console.error(error))
+    }
 
     return (
         <Container component='main' maxWidth='xs'>
@@ -38,6 +51,7 @@ export default function BasicAuthenticator(props: BasicAuthenticatorPropsInterfa
                         type='submit'
                         fullWidth
                         variant='contained'
+                        onClick={signinOnSubmit}
                     >
                         Sign in
                     </Button>
